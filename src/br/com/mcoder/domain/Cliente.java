@@ -10,6 +10,9 @@ public class Cliente implements Serializable {
     private String cidade;
     private String estado;
 
+    public Cliente() {
+
+    }
 
     public Cliente(String nome, Long cpf, String genero, String cidade, String estado) {
         this.nome = nome;
