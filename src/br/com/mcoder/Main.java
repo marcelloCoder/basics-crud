@@ -38,9 +38,9 @@ public class Main {
                 sair();
             } else if (isOpcaoCadastro(opcao)) {
                 String dados = JOptionPane.showInputDialog(null,
-                        "Digite os dados do cliente separados por vígula, conforme exemplo: Nome, CPF, Telefone, Endereço, Número, Cidade e Estado",
+                        "Digite os dados do cliente separados por vígula, conforme exemplo: Nome, CPF, GENERO, CIDADE, ESTADO",
                         "Cadastro", JOptionPane.INFORMATION_MESSAGE);
-                cadastrar(dados);
+                cadastrar1(dados);
             } else if(isOpcaoConsultar(opcao)) {
                 String dados = JOptionPane.showInputDialog(null,
                         "Digite o cpf",
@@ -64,6 +64,25 @@ public class Main {
         Boolean isCadastrado = iClienteDAO.cadastrar(cliente);
         if (isCadastrado) {
             JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso ", "Sucesso",JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Cliente já se encontra cadastrado", "Erro",JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+
+    private static void cadastrar1(String dados) {
+        String[] dadosSeparados = dados.split(",");
+
+        Cliente cliente = new Cliente();
+        cliente.setNome(dadosSeparados[0]);
+        cliente.setCpf(null);
+        cliente.setGenero(dadosSeparados[2]);
+        cliente.setCidade(dadosSeparados[3]);
+        cliente.setEstado(dadosSeparados[4]);
+
+        Boolean isCadastrado = iClienteDAO.cadastrar(cliente);
+        if (isCadastrado) {
+            JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso ", "Sucesso",JOptionPane.INFORMATION_MESSAGE);
+            System.out.println(cliente);
         } else {
             JOptionPane.showMessageDialog(null, "Cliente já se encontra cadastrado", "Erro",JOptionPane.INFORMATION_MESSAGE);
         }
