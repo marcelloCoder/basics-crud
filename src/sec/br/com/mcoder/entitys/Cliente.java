@@ -42,12 +42,13 @@ public class Cliente {
     }
 
     public void deposito(Double quantia){
-        saldo =+ quantia;
-
+        saldo += quantia;
+        System.out.println("Novo saldo: " + saldo);
     }
 
     public void saque(Double quantia){
-        saldo =- quantia + 2.5;
+        saldo -= quantia + 2.5;
+        System.out.println("Novo saldo: " + saldo);
     }
 
     @Override
