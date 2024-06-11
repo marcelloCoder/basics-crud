@@ -12,8 +12,7 @@ public class Cliente {
 
     }
 
-    public Cliente(Long codigo, String nome, Double saldo) {
-        this.codigo = codigo;
+    public Cliente(String nome, Double saldo) {
         this.nome = nome;
         this.saldo = saldo;
     }
@@ -40,6 +39,15 @@ public class Cliente {
 
     public void setSaldo(Double saldo) {
         this.saldo = saldo;
+    }
+
+    public void deposito(Double quantia){
+        saldo =+ quantia;
+
+    }
+
+    public void saque(Double quantia){
+        saldo =- quantia + 2.5;
     }
 
     @Override
