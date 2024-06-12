@@ -1,11 +1,8 @@
 package sec.br.com.mcoder.app;
 
-import sec.br.com.mcoder.entitys.Banco;
 import sec.br.com.mcoder.entitys.Cliente;
 
-import java.io.IOException;
 import java.util.Locale;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class App {
