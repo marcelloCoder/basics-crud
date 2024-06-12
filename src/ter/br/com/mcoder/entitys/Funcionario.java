@@ -4,15 +4,15 @@ public class Funcionario {
 
     private Integer id;
     private String nome;
-    private Double salário;
+    private Double salario;
 
     public Funcionario() {
     }
 
-    public Funcionario(Integer id, String nome, Double salário) {
+    public Funcionario(Integer id, String nome, Double salario) {
         this.id = id;
         this.nome = nome;
-        this.salário = salário;
+        this.salario = salario;
     }
 
     public Integer getId() {
@@ -31,12 +31,12 @@ public class Funcionario {
         this.nome = nome;
     }
 
-    public Double getSalário() {
-        return salário;
+    public Double getSalario() {
+        return salario;
     }
 
-    public void setSalário(Double salário) {
-        this.salário = salário;
+    public void setSalário(Double salario) {
+        this.salario = salario;
     }
 
     @Override
@@ -44,7 +44,11 @@ public class Funcionario {
         return "Funcionario{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", salário=" + salário +
+                ", salário=" + salario +
                 '}';
+    }
+
+    public void aumentarSalario(Double porcentagem){
+        salario += salario * porcentagem /  100;
     }
 }
