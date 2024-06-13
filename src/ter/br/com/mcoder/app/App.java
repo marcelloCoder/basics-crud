@@ -23,7 +23,23 @@ public class App {
         funcionarioLista.add(marcello);
         funcionarioLista.add(ana);
         funcionarioLista.add(pedro);
-        System.out.println(funcionario);
+
+        List<Funcionario> funcionarioMenorSalario = new ArrayList<>();
+        List<Funcionario> funcionarioMaiorSalario = new ArrayList<>();
+
+
+        for (Funcionario funcionario1 : funcionarioLista){
+            if(funcionario1.getSalario() <= 500.0){
+                funcionarioMenorSalario.add(funcionario1);
+
+            }else{
+                funcionarioMaiorSalario.add(funcionario1);
+
+            }
+        }
+        System.out.println(funcionarioMenorSalario);
+        System.out.println(funcionarioMaiorSalario);
+        //System.out.println(funcionarioLista);
 
 
     }

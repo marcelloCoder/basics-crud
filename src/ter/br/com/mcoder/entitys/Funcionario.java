@@ -45,7 +45,7 @@ public class Funcionario {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", salário=" + salario +
-                '}';
+                '}'+ "\n";
     }
 
     public void aumentarSalario(Double porcentagem){
