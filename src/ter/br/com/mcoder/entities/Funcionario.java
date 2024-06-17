@@ -1,4 +1,4 @@
-package ter.br.com.mcoder.entitys;
+package ter.br.com.mcoder.entities;
 
 public class Funcionario {
 

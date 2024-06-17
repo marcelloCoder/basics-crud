@@ -1,7 +1,7 @@
 package ter.br.com.mcoder.fuctions;
 
 
-import ter.br.com.mcoder.entitys.Funcionario;
+import ter.br.com.mcoder.entities.Funcionario;
 
 public class Notas {
 

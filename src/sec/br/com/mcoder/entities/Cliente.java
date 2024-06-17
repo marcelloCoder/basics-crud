@@ -1,4 +1,4 @@
-package sec.br.com.mcoder.entitys;
+package sec.br.com.mcoder.entities;
 
 import java.util.Objects;
 

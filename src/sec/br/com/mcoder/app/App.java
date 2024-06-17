@@ -1,6 +1,6 @@
 package sec.br.com.mcoder.app;
 
-import sec.br.com.mcoder.entitys.Cliente;
+import sec.br.com.mcoder.entities.Cliente;
 
 import java.util.InputMismatchException;
 import java.util.Locale;

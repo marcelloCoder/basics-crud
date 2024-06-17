@@ -1,6 +1,6 @@
 package ter.br.com.mcoder.app;
 
-import ter.br.com.mcoder.entitys.Funcionario;
+import ter.br.com.mcoder.entities.Funcionario;
 import ter.br.com.mcoder.fuctions.Notas;
 
 import java.util.ArrayList;
