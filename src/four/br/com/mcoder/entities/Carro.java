@@ -60,4 +60,15 @@ public class Carro {
     public void setData_fabricado(Date data_fabricado) {
         this.data_fabricado = data_fabricado;
     }
+
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "id=" + id +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", valor=" + valor +
+                ", data_fabricado=" + data_fabricado +
+                '}';
+    }
 }

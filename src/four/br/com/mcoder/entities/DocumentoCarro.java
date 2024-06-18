@@ -1,5 +1,6 @@
 package four.br.com.mcoder.entities;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class DocumentoCarro extends Carro{
@@ -30,5 +31,17 @@ public class DocumentoCarro extends Carro{
 
     public void setIpva(String ipva) {
         this.ipva = ipva;
+    }
+
+    public void novo_Dono(String novoDono){
+        dono = novoDono;
+    }
+
+    @Override
+    public String toString() {
+        return "DocumentoCarro{" +
+                "dono='" + dono + '\'' +
+                ", ipva='" + ipva + '\'' +
+                "} " + super.toString();
     }
 }
