@@ -5,13 +5,13 @@ import java.util.Date;
 
 public class DocumentoCarro extends Carro{
     private String dono;
-    private String ipva;
+    private Boolean ipva;
 
     public DocumentoCarro() {
         super();
     }
 
-    public DocumentoCarro(Long id, String marca, String modelo, Double valor, Date data_fabricado, String dono, String ipva) {
+    public DocumentoCarro(Long id, String marca, String modelo, Double valor, Date data_fabricado, String dono, Boolean ipva) {
         super(id, marca, modelo, valor, data_fabricado);
         this.dono = dono;
         this.ipva = ipva;
@@ -25,11 +25,11 @@ public class DocumentoCarro extends Carro{
         this.dono = dono;
     }
 
-    public String getIpva() {
+    public Boolean getIpva() {
         return ipva;
     }
 
-    public void setIpva(String ipva) {
+    public void setIpva(Boolean ipva) {
         this.ipva = ipva;
     }
 
