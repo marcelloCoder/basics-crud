@@ -1,5 +1,7 @@
 package five.br.com.mcoder.app;
 
+import five.br.com.mcoder.entities.Circle;
+import five.br.com.mcoder.entities.Rectangle;
 import five.br.com.mcoder.entities.Shape;
 import five.br.com.mcoder.entities.enums.Color;
 
@@ -29,8 +31,21 @@ public class App {
                 double width = sc.nextDouble();
                 System.out.println("ALTURA: ");
                 double height = sc.nextDouble();
+                list.add(new Rectangle(color, width, height));
+            }else{
+                System.out.println("DIGITE O RAIO DO CIRCULO");
+                double radius = sc.nextDouble();
+                list.add(new Circle(color, radius));
             }
 
+
+
+        }
+
+        System.out.println();
+        System.out.println("AREA DOS DESENHOS : ");
+        for (Shape shape : list){
+            System.out.println(String.format("%.2f", shape.area()));
         }
         sc.close();
     }
