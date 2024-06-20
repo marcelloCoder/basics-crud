@@ -1,6 +1,6 @@
 package ter.br.com.mcoder.entities;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private Integer id;
     private String nome;
@@ -48,7 +48,6 @@ public class Funcionario {
                 '}'+ "\n";
     }
 
-    public void aumentarSalario(Double porcentagem){
-        salario = salario + salario * porcentagem /  100;
-    }
+
+    public abstract void aumentarSalario(Double porcentagem);
 }

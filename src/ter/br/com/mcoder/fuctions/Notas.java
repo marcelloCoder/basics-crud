@@ -2,14 +2,21 @@ package ter.br.com.mcoder.fuctions;
 
 
 import ter.br.com.mcoder.entities.Funcionario;
+import ter.br.com.mcoder.entities.FuncionarioAtivo;
+import ter.br.com.mcoder.entities.FuncionarioParticular;
 
 public class Notas {
 
-    public Funcionario preencher(Integer id, String nome, Double salario){
-        Funcionario funcionario = new Funcionario();
-        funcionario.setId(id);
-        funcionario.setNome(nome);
-        funcionario.setSalario(salario);
-        return funcionario;
+    public FuncionarioParticular preencherParticular(Integer id, String nome, Double salario, String classificacao){
+        FuncionarioParticular funcionarioP = new FuncionarioParticular();
+        funcionarioP.setId(id);
+        funcionarioP.setNome(nome);
+        funcionarioP.setSalario(salario);
+        funcionarioP.setClassificacao(classificacao);
+        return funcionarioP;
+    }
+
+    public FuncionarioAtivo preencherAtivo(Integer id, String nome, Double salario, String status, String depoimento){
+
     }
 }

@@ -41,7 +41,7 @@ public class App {
         System.out.println(funcionarioMaiorSalario);
         //System.out.println(funcionarioLista);
 
-        marcello.aumentarSalario(00.5);
+        //marcello.aumentarSalario(00.5);
 
         System.out.println(marcello);
 
