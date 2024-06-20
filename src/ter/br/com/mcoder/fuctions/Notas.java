@@ -17,6 +17,12 @@ public class Notas {
     }
 
     public FuncionarioAtivo preencherAtivo(Integer id, String nome, Double salario, String status, String depoimento){
-
+        FuncionarioAtivo funcionarioAtivo = new FuncionarioAtivo();
+        funcionarioAtivo.setId(id);
+        funcionarioAtivo.setNome(nome);
+        funcionarioAtivo.setSalario(salario);
+        funcionarioAtivo.setStatus(status);
+        funcionarioAtivo.setDepoimento(depoimento);
+        return funcionarioAtivo;
     }
 }

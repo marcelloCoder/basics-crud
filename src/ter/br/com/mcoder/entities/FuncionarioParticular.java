@@ -22,10 +22,18 @@ public class FuncionarioParticular extends Funcionario{
     }
 
     @Override
-    public void aumentarSalario(Double porcentagem) {
+    public String toString() {
+        return "FuncionarioParticular{" +
+                "classificacao='" + classificacao + '\'' +
+                "} " + super.toString();
+    }
+
+    @Override
+    public Double aumentarSalario(Double porcentagem) {
         Double salario = getSalario();
         if (classificacao.equals("alto")){
-            salario += (salario * porcentagem) / 100;
+            salario = (salario * porcentagem) / 100;
         }
+        return salario;
     }
 }

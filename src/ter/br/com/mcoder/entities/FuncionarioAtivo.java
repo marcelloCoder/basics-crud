@@ -31,12 +31,21 @@ public class FuncionarioAtivo extends Funcionario {
         this.depoimento = depoimento;
     }
 
+    @Override
+    public String toString() {
+        return "FuncionarioAtivo{" +
+                "status='" + status + '\'' +
+                ", depoimento='" + depoimento + '\'' +
+                "} " + super.toString();
+    }
 
     @Override
-    public void aumentarSalario(Double porcentagem) {
+    public Double aumentarSalario(Double porcentagem) {
         Double salario = getSalario();
         if (status.equals("online")) {
             salario += (salario * porcentagem) / 100;
+
         }
+        return salario;
     }
 }

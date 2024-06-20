@@ -49,5 +49,5 @@ public abstract class Funcionario {
     }
 
 
-    public abstract void aumentarSalario(Double porcentagem);
+    public abstract Double aumentarSalario(Double porcentagem);
 }
