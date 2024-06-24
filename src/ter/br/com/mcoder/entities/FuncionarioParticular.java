@@ -32,7 +32,7 @@ public class FuncionarioParticular extends Funcionario{
     public Double aumentarSalario(Double porcentagem) {
         Double salario = getSalario();
         if (classificacao.equals("alto")){
-            salario = (salario * porcentagem) / 100;
+            salario = salario * porcentagem / 100;
         }
         return salario;
     }
