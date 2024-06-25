@@ -3,6 +3,7 @@ package seven.br.com.mcoder.app;
 import seven.br.com.mcoder.model.entities.Contrato;
 import seven.br.com.mcoder.model.entities.Prestacao;
 import seven.br.com.mcoder.model.services.ContratoService;
+import seven.br.com.mcoder.model.services.PaypalService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -30,7 +31,7 @@ public class App {
         System.out.println("Entre com o numero de parcelas");
         int n = sc.nextInt();
 
-        ContratoService contratoService = new ContratoService(null);
+        ContratoService contratoService = new ContratoService(new PaypalService());
 
         contratoService.processoContrato(obj, n);
 

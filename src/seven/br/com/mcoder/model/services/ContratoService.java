@@ -17,8 +17,18 @@ public class ContratoService {
     }
 
     public void processoContrato(Contrato contrato, Integer meses){
-        contrato.getListaPrestacao().add(new Prestacao(LocalDate.of(2001,3,1),200.5));
-        contrato.getListaPrestacao().add(new Prestacao(LocalDate.of(2015,6,29),230.0));
+
+        double parcelaBasica = contrato.getValorTotal() / meses;
+
+        for (int i = 1; i <= meses ; i++) {
+            LocalDate dataVencimento = contrato.getData().plusMonths(i);
+
+            double jurosCadaMes = pagamentoOnlineService.juros(parcelaBasica, i);
+            double taxa = pagamentoOnlineService.taxaPagamento(parcelaBasica + jurosCadaMes);
+            double parcelaTotal = parcelaBasica + jurosCadaMes + taxa;
+
+            contrato.getListaPrestacao().add(new Prestacao(dataVencimento, parcelaTotal));
+        }
 
     }
 }
