@@ -1,12 +1,15 @@
 package seven.br.com.mcoder.model.entities;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Prestacao {
 
     private LocalDate dataVencimento;
 
     private Double quantia;
+
+    private static DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public Prestacao() {
     }
@@ -30,5 +33,10 @@ public class Prestacao {
 
     public void setQuantia(Double quantia) {
         this.quantia = quantia;
+    }
+
+    @Override
+    public String toString() {
+        return dataVencimento.format(fmt) + " - " + String.format("%.2f", quantia);
     }
 }

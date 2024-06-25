@@ -1,6 +1,7 @@
 package seven.br.com.mcoder.app;
 
 import seven.br.com.mcoder.model.entities.Contrato;
+import seven.br.com.mcoder.model.entities.Prestacao;
 import seven.br.com.mcoder.model.services.ContratoService;
 
 import java.time.LocalDate;
@@ -30,6 +31,14 @@ public class App {
         int n = sc.nextInt();
 
         ContratoService contratoService = new ContratoService(null);
+
+        contratoService.processoContrato(obj, n);
+
+        System.out.println("Parcelas: ");
+
+        for (Prestacao prestacao : obj.getListaPrestacao()){
+            System.out.println(prestacao);
+        }
 
 
         sc.close();
