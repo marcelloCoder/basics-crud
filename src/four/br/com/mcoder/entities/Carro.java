@@ -1,5 +1,6 @@
 package four.br.com.mcoder.entities;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public abstract class Carro {
@@ -8,12 +9,12 @@ public abstract class Carro {
     private String marca;
     private String modelo;
     private Double valor;
-    private Date data_fabricado;
+    private LocalDate data_fabricado;
 
     public Carro() {
     }
 
-    public Carro(Long id, String marca, String modelo, Double valor, Date data_fabricado) {
+    public Carro(Long id, String marca, String modelo, Double valor, LocalDate data_fabricado) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -53,22 +54,21 @@ public abstract class Carro {
         this.valor = valor;
     }
 
-    public Date getData_fabricado() {
+    public LocalDate getData_fabricado() {
         return data_fabricado;
     }
 
-    public void setData_fabricado(Date data_fabricado) {
+    public void setData_fabricado(LocalDate data_fabricado) {
         this.data_fabricado = data_fabricado;
     }
 
     @Override
     public String toString() {
-        return "Carro{" +
+        return "\n\nCarro\n" +
                 "id=" + id +
-                ", marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", valor=" + valor +
-                ", data_fabricado=" + data_fabricado +
-                '}';
+                "\nmarca=" + marca +
+                "\nmodelo='" + modelo +
+                "\nvalor=" + valor +
+                "\ndata_fabricado=" + data_fabricado;
     }
 }

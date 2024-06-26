@@ -11,7 +11,7 @@ public class DocumentoCarro extends Carro{
         super();
     }
 
-    public DocumentoCarro(Long id, String marca, String modelo, Double valor, Date data_fabricado, String dono, Boolean ipva) {
+    public DocumentoCarro(Long id, String marca, String modelo, Double valor, LocalDate data_fabricado, String dono, Boolean ipva) {
         super(id, marca, modelo, valor, data_fabricado);
         this.dono = dono;
         this.ipva = ipva;
@@ -39,9 +39,8 @@ public class DocumentoCarro extends Carro{
 
     @Override
     public String toString() {
-        return "DocumentoCarro{" +
-                "dono='" + dono + '\'' +
-                ", ipva='" + ipva + '\'' +
-                "} " + super.toString();
+        return "\n\nDocumentoCarro \n" +
+                "dono=" + dono +
+                ", \nipva=" + ipva + super.toString();
     }
 }
